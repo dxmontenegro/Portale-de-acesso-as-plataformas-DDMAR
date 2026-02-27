@@ -17,6 +17,7 @@
             --white: #ffffff;
             --shadow: 0 20px 40px rgba(0,0,0,0.1);
             --shadow-hover: 0 30px 60px rgba(0,0,0,0.15);
+            --warning: #ffc107;
         }
 
         * {
@@ -155,6 +156,18 @@
             grid-column: 1 / -1;
         }
 
+        .ocorrencia-note {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 2px solid var(--warning);
+            border-radius: 12px;
+            padding: 12px 15px;
+            color: #856404;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
         /* Cards compactos mas elegantes */
         .system-card {
             background: rgba(255,255,255,0.95);
@@ -276,6 +289,11 @@
             .system-card {
                 padding: 20px 15px;
             }
+            
+            .ocorrencia-note {
+                font-size: 0.85rem;
+                padding: 10px 12px;
+            }
         }
     </style>
 </head>
@@ -327,9 +345,15 @@
         <div class="section gestao">
             <h2 class="section-title">🏛️ Gestão Escolar</h2>
             
+            <!-- Ocorrências COM AVISO CENTRALIZADO -->
             <div class="system-card">
                 <i class="fas fa-exclamation-triangle system-icon"></i>
                 <h3>Registro de Ocorrências</h3>
+                
+                <div class="ocorrencia-note">
+                    👀 Verifique registros anteriores: Use o botão "Consultar" para ter visão ampla da quantidade de ocorrências deste aluno(a).
+                </div>
+                
                 <p>Sistema exclusivo para gestão da escola. Registre ocorrências de indisciplina dos alunos.</p>
                 <a href="https://ocorrencias-tau.vercel.app/" class="system-btn" target="_blank">
                     <i class="fas fa-arrow-right"></i>
@@ -355,3 +379,4 @@
     </footer>
 </body>
 </html>
+
