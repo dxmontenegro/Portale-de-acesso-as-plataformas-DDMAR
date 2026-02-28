@@ -18,6 +18,7 @@
             --shadow: 0 20px 40px rgba(0,0,0,0.1);
             --shadow-hover: 0 30px 60px rgba(0,0,0,0.15);
             --warning: #ffc107;
+            --gov-br: #0066cc;
         }
 
         * {
@@ -211,6 +212,13 @@
             background-clip: text;
         }
 
+        .gov-icon {
+            background: linear-gradient(45deg, var(--gov-br), #004080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .system-card h3 {
             font-size: 1.3rem;
             font-weight: 600;
@@ -341,11 +349,11 @@
             </div>
         </div>
 
-        <!-- Gestão -->
+        <!-- Gestão (3 cards) -->
         <div class="section gestao">
-            <h2 class="section-title">🏛️ Gestão Escolar</h2>
+            <h2 class="section-title">🏛️ Coordenação/Gestão</h2>
             
-            <!-- Ocorrências COM AVISO CENTRALIZADO -->
+            <!-- Ocorrências -->
             <div class="system-card">
                 <i class="fas fa-exclamation-triangle system-icon"></i>
                 <h3>Registro de Ocorrências</h3>
@@ -361,6 +369,7 @@
                 </a>
             </div>
 
+            <!-- Conselho -->
             <div class="system-card">
                 <i class="fas fa-graduation-cap system-icon"></i>
                 <h3>Conselho de Classe 2026</h3>
@@ -368,6 +377,17 @@
                 <a href="https://conselho2026.vercel.app/" class="system-btn" target="_blank">
                     <i class="fas fa-arrow-right"></i>
                     ABRIR CONSELHO 2026
+                </a>
+            </div>
+
+            <!-- NOVO: Cofre de dados GOV.br -->
+            <div class="system-card">
+                <i class="fas fa-lock system-icon gov-icon"></i>
+                <h3>Cofre de dados GOV.br</h3>
+                <p>Plataforma onde os alunos guardam seus logins GOV.br e outras informações importantes.</p>
+                <a href="https://eemtidragaodomarcofre.vercel.app/" class="system-btn" target="_blank">
+                    <i class="fas fa-arrow-right"></i>
+                    ACESSAR COFRE GOV.BR
                 </a>
             </div>
         </div>
