@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal EEMTI Dragão do Mar</title>
+
+<link rel="icon" type="image/png" href="imagem1.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#1a73e8;
+--secondary:#34c759;
+--dark:#1a1a2e;
+--white:#ffffff;
+--glass:rgba(255,255,255,0.15);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#667eea,#764ba2);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* HEADER */
+
+.header{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+text-align:center;
+padding:15px;
+color:white;
+}
+
+.header-title{
+font-size:1.2rem;
+font-weight:600;
+}
+
+.header-subtitle{
+font-size:.8rem;
+opacity:.9;
+}
+
+/* CONTAINER */
+
+.container{
+flex:1;
+max-width:1100px;
+margin:auto;
+padding:15px;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+/* LOGO */
+
+.logo-area{
+text-align:center;
+}
+
+.main-logo{
+width:110px;
+margin:auto;
+display:block;
+}
+
+.welcome{
+color:white;
+margin-top:8px;
+font-size:1.2rem;
+}
+
+/* SECTIONS */
+
+.section-title{
+text-align:center;
+color:white;
+font-size:1.5rem;
+margin-bottom:10px;
+}
+
+/* GRID RESPONSIVO */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+border-radius:16px;
+padding:18px 15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:2.2rem;
+margin-bottom:10px;
+color:var(--primary);
+}
+
+.card h3{
+font-size:1rem;
+margin-bottom:6px;
+}
+
+.card p{
+font-size:.8rem;
+color:#555;
+margin-bottom:12px;
+}
+
+.card a{
+display:block;
+background:linear-gradient(45deg,var(--primary),var(--secondary));
+color:white;
+text-decoration:none;
+padding:8px;
+border-radius:20px;
+font-size:.85rem;
+font-weight:500;
+}
+
+/* AVISO */
+
+.note{
+background:rgba(255,255,255,0.2);
+color:white;
+padding:10px;
+border-radius:12px;
+font-size:.85rem;
+text-align:center;
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+.footer{
+background:rgba(255,255,255,0.15);
+text-align:center;
+padding:15px;
+font-size:.8rem;
+color:white;
+}
+
+/* MOBILE EXTRA */
+
+@media(max-width:500px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.card{
+padding:15px 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="header-title">EEMTI DRAGÃO DO MAR - SEFOR 2</div>
+<div class="header-subtitle">Governo do Estado do Ceará</div>
+</header>
+
+<div class="container">
+
+<div class="logo-area">
+<img src="imagem1.png" class="main-logo">
+<div class="welcome">ESCOLHA A PLATAFORMA</div>
+</div>
+
+<!-- PROFESSORES -->
+
+<h2 class="section-title">👨‍🏫 Professores</h2>
+
+<div class="note">
+📝 O mesmo login serve para EletiFAS e Reserva de Equipamentos
+</div>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-chalkboard-teacher"></i>
+<h3>EletiFAS</h3>
+<p>Frequência e notas.</p>
+<a href="https://eletifas.vercel.app/" target="_blank">
+ACESSAR
+</a>
+</div>
+
+<div class="card">
+<i class="fas fa-calendar-check"></i>
+<h3>Reserva</h3>
+<p>Equipamentos e espaços.</p>
+<a href="https://reservaprojetores.vercel.app/" target="_blank">
+RESERVAR
+</a>
+</div>
+
+<!-- NOVO CARD BIBLIOTECA -->
+
+<div class="card">
+<i class="fas fa-book"></i>
+<h3>Biblioteca</h3>
+<p>Controle de empréstimos.</p>
+<a href="https://multimeios-six.vercel.app/" target="_blank">
+ABRIR
+</a>
+</div>
+
+</div>
+
+<!-- GESTÃO -->
+
+<h2 class="section-title">🏛️ Gestão</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-exclamation-triangle"></i>
+<h3>Ocorrências</h3>
+<p>Registro disciplinar.</p>
+<a href="https://ocorrencias-tau.vercel.app/" target="_blank">
+ABRIR
+</a>
+</div>
+
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<h3>Conselho 2026</h3>
+<p>Sistema do conselho.</p>
+<a href="https://conselho2026.vercel.app/" target="_blank">
+ABRIR
+</a>
+</div>
+
+<div class="card">
+<i class="fas fa-lock"></i>
+<h3>Cofre GOV.br</h3>
+<p>Dados dos alunos.</p>
+<a href="https://eemtidragaodomarcofre.vercel.app/" target="_blank">
+ACESSAR
+</a>
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+Plataforma desenvolvida pelo <strong>L.E.I.</strong> da EEMTI Dragão do Mar
+</footer>
+
+</body>
+</html>
