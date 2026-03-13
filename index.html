@@ -191,6 +191,64 @@ body {
   transform: translateY(-1px);
 }
 
+/* AVISO OCORRÊNCIAS - EXCLUSIVO GESTÃO */
+.ocorrencias-info {
+  background: #fee2e2;
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #991b1b;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ocorrencias-info::before {
+  content: '🚫';
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* AVISO COFRE - CENTRALIZADO */
+.cofre-info {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #92400e;
+  text-align: center;
+}
+
+.cofre-info::before {
+  content: '⚠️';
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* AVISO CONSELHO - CENTRALIZADO */
+.conselho-info {
+  background: #ecfdf5;
+  border: 1px solid #6ee7b7;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #065f46;
+  text-align: center;
+}
+
+.conselho-info::before {
+  content: '📱';
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
 /* NOTA */
 .note {
   background: #eff6ff;
@@ -204,7 +262,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* RODAPÉ FIXO */
+/* RODAPÉ FIXO - REFORMULADO */
 .footer {
   position: fixed;
   bottom: 0;
@@ -214,24 +272,42 @@ body {
   border-top: 1px solid var(--border-color);
   padding: 16px 20px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   z-index: 100;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
 }
 
-.footer strong {
+.footer .credits-main {
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.footer .credits-main strong {
   color: var(--primary);
   font-weight: 600;
 }
 
-.tech-stack {
-  margin-top: 4px;
-  font-size: 0.8rem;
+.footer .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.75rem;
   color: var(--text-light);
 }
 
-.tech-stack strong {
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.tech-powered {
   color: var(--secondary);
+  font-weight: 600;
 }
 
 /* TABLET + DESKTOP */
@@ -249,6 +325,15 @@ body {
   
   .card {
     flex: 1 1 300px;
+  }
+  
+  .footer {
+    font-size: 0.9rem;
+  }
+  
+  .tech-stack {
+    font-size: 0.8rem;
+    gap: 16px;
   }
 }
 
@@ -311,6 +396,9 @@ body {
       <i class="fas fa-exclamation-triangle"></i>
       <h3>Ocorrências</h3>
       <p>Registro disciplinar.</p>
+      <div class="ocorrencias-info">
+        Inserção de registros: USO EXCLUSIVO DA GESTÃO. Professores podem consultar sem problemas.
+      </div>
       <a href="https://ocorrencias-tau.vercel.app/" target="_blank">Abrir</a>
     </div>
 
@@ -318,6 +406,9 @@ body {
       <i class="fas fa-graduation-cap"></i>
       <h3>Conselho 2026</h3>
       <p>Sistema do conselho.</p>
+      <div class="conselho-info">
+        PDTs: Não enviem fotos direto pela câmera do celular (alta resolução ocupa muito espaço). Envie via WhatsApp que redimensionamos.
+      </div>
       <a href="https://conselho2026.vercel.app/" target="_blank">Abrir</a>
     </div>
 
@@ -325,15 +416,23 @@ body {
       <i class="fas fa-lock"></i>
       <h3>Cofre GOV.br</h3>
       <p>Dados dos alunos.</p>
+      <div class="cofre-info">
+        Apenas e-mails da gestão cadastrados têm acesso aos dados pessoais. Outros e-mails abrem a interface do aluno.
+      </div>
       <a href="https://eemtidragaodomarcofre.vercel.app/" target="_blank">Acessar</a>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  Plataforma desenvolvida pelo <strong>L.E.I.</strong> da EEMTI Dragão do Mar
+  <div class="credits-main">
+    Desenvolvido pelo <strong>L.E.I.</strong> da EEMTI Dragão do Mar
+  </div>
   <div class="tech-stack">
-    Kotlin • PostgreSQL & MySQL • HTML5/CSS <strong>Powered by DMX TECH</strong>
+    <span class="tech-item">Kotlin</span>
+    <span class="tech-item">PostgreSQL & MySQL</span>
+    <span class="tech-item">HTML5/CSS</span>
+    <span class="tech-item tech-powered">Powered by DMX TECH</span>
   </div>
 </footer>
 
